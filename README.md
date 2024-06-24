@@ -8,6 +8,8 @@ Usage: ./tcp-proxy <src addr> <dest addr> [-v]
 
 Examples: 
        ./tcp-proxy :3000 :5000                         # forwards all incoming TCP connections on port 3000 to 5000.
+       ./tcp-proxy :3000 :5000 &                       # forwards all incoming TCP connections on port 3000 to 5000 
+                                                       # while running silently in the background.
        ./tcp-proxy :5000 :31774 -v                     # forwards all incoming TCP connections on port 5000 to 31774.
                                                        # Verbose logging is enabled.
        ./tcp-proxy 127.0.0.1:3000 192.168.100.10:5000  # forwards all incoming TCP connections on 127.0.0.1 on port 3000
